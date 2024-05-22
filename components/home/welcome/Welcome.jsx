@@ -13,9 +13,11 @@ import styles from "./welcome.style";
 import { icons, SIZES } from "../../../constants";
 
 const Welcome = () => {
+  const router = useRouter();
+
   return (
     <View>
-      <Text>Welcome</Text>
+      <View style={styles.container}></View>
     </View>
   );
 };
