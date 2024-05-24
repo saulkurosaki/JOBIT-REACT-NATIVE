@@ -6,7 +6,7 @@ import {
   ActivityIndicator,
   RefreshControl,
 } from "react-native";
-import { Stack, useRouter, useSearchParams } from "expo-router";
+import { Stack, useRouter, useGlobalSearchParams } from "expo-router";
 import { useCallback, useState } from "react";
 
 import {
@@ -21,7 +21,7 @@ import { COLORS, icons, SIZES } from "../../constants";
 import { useFetch } from "../../hook/useFetch";
 
 const JobDetails = () => {
-  const params = useSearchParams();
+  const params = useGlobalSearchParams();
   const router = useRouter();
 
   const { data, isLoading, error, refetch } = useFetch("job-details", {
@@ -29,9 +29,22 @@ const JobDetails = () => {
   });
 
   return (
-    <View>
-      <Text>JobDetails</Text>
-    </View>
+    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>
+      {/* <Stack.Screen
+        options={{
+          headerStyle: { backgroundColor: COLORS.lightWhite },
+          headerShadowVisible: false,
+          headerBackVisible: false,
+          headerLeft: () => (
+            <ScreenHeaderBtn
+              iconUrl={icons.left}
+              dimension="60%"
+              handlePress={() => router.back()}
+            />
+          ),
+        }}
+      ></Stack.Screen> */}
+    </SafeAreaView>
   );
 };
 
