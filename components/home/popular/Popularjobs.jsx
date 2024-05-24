@@ -15,7 +15,9 @@ import PopularJobCard from "../../common/cards/popular/PopularJobCard";
 const Popularjobs = () => {
   return (
     <View style={styles.container}>
-      <View style={styles.header}></View>
+      <View style={styles.header}>
+        <Text style={styles.headerTitle}>Popular Jobs</Text>
+      </View>
     </View>
   );
 };
