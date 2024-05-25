@@ -18,6 +18,10 @@ const Company = ({ companyLogo, jobTitle, companyName, location }) => {
           style={styles.logoImage}
         />
       </View>
+
+      <View style={styles.jobTitleBox}>
+        <Text style={styles.jobTitle}>{jobTitle}</Text>
+      </View>
     </View>
   );
 };
