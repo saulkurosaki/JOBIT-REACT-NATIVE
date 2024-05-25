@@ -7,8 +7,8 @@ import { checkImageURL } from "../../../utils";
 
 const Company = ({ companyLogo, jobTitle, companyName, location }) => {
   return (
-    <View>
-      <Text>Company</Text>
+    <View style={styles.container}>
+      <View style={styles.logoBox}></View>
     </View>
   );
 };
